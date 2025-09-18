@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Dr. Alba Galvan</title>
+  <style>
+    /* General Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      scroll-behavior: smooth;
+      background: #f4f4f4;
+    }
+
+    section {
+      min-height: 100vh; /* each section takes up the full screen */
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Different colors to differentiate sections */
+    #services { background: linear-gradient(135deg, #ff9966, #ff5e62); color: white; }
+    #portfolio { background: linear-gradient(135deg, #56ab2f, #a8e063); color: white; }
+    #contact { background: linear-gradient(135deg, #36d1dc, #5b86e5); color: white; }
+    #services { background: linear-gradient(135deg, #667eea, #764ba2); color: white; }
+
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    nav {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 20px;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      background: rgba(0,0,0,0.5);
+      padding: 10px 15px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: rgba(0,0,0,0.8);
+    }
+    #imginfo{
+      height: auto;
+      width: 100%;
+      display: block;
+    }
+    #imgbanner{
+      height: auto;
+      width: 100%;
+      display: block;
+    }
+  
+    #limpieza,#extraccion,#endodoncia,#brackets,#corona,#resina{
+      height: 200px;
+      width: 300px;
+    }
+    #services{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    #info{
+      position: relative;
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+    
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        width: 95%; 
+        left: 2.5%; 
+        transform: translateX(0); 
+        top: 10px; 
+      }
+
+      nav a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+      }
+    }
+    #contact-section {
+      min-height: auto;
+      padding: 0;
+    }
+    /* --- START: STYLES FOR MANUAL SLIDESHOW --- */
+
+    .slideshow-container {
+      width: 100%;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+      height: 100vh; /* Occupies the full height of the section */
+    }
+    .mySlides img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* Ensures the image fits completely */
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      background-color: rgba(0,0,0,0.5);
+    }
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    /* Navigation dots */
+    .dot-container {
+        text-align: center;
+        padding: 20px;
+        position: absolute;
+        bottom: 15px;
+        width: 100%;
+    }
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+
+    /* --- END: STYLES FOR MANUAL SLIDESHOW --- */
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#information">Information</a>
+    <a href="#services">Services</a>
+    <a href="#specialists">Specialists</a>
+    <a href="#contact-section">Contact</a>
+  </nav>
+
+  <section id="home">
+    <div class="slideshow-container">
+    
+        <div class="mySlides">
+            <img src="logo.jpg" alt="Image 1">
+        </div>
+    
+        <div class="mySlides">
+            <img src="imagen1.jpg" alt="Image 2">
+        </div>
+    
+        <div class="mySlides">
+            <img src="imagen2.jpg" alt="Image 3">
+        </div>
+    
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+  </section>
+
+  <section id="information">
+    <div class="row g-4 text-center">
+
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <div class="card-body">
+            <div class="mb-3 fs-1 text-danger">🦷</div>
+            <h5 class="card-title">About Us</h5>
+            <br>
+            <p class="card-text">We are a team of specialists ready 
+                to take care of your smile. We offer quality dental care.
+            </p>
+            <br>
+            <p>
+                Call Us
+                📞878-78-245-77
+                <br>
+                📞830-3-25-47-37
+            </p>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <div class="card-body">
+            <div class="mb-3 fs-1 text-primary">👤</div>
+            <h5 class="card-title">Contact Us</h5>
+                 <form name="contacto-paciente" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    
+    <input type="hidden" name="form-name" value="contacto-paciente" />
+    
+    <p style="display:none;">
+      <label>No llenes esto: <input name="bot-field" /></label>
+    </p>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="nombre" class="form-label">Nombre(s)</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ej. Ana" required>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="apellidos" class="form-label">Apellidos</label>
+        <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Ej. García López" required>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-6 mb-3">
+          <label for="telefono" class="form-label">Teléfono</label>
+          <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ej. 877 123 4567" required>
+      </div>
+      <div class="col-md-6 mb-3">
+          <label for="email" class="form-label">Correo Electrónico</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Ej. tucorreo@correo.com" required>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="mensaje" class="form-label">Deja tu mensaje</label>
+      <textarea class="form-control" id="mensaje" name="mensaje" rows="3" placeholder=""></textarea>
+    </div>
+    
+    <div class="d-grid">
+      <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+    </div>
+</form>
+                  </div>          
+          </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <div class="card-body">
+            <div class="mb-3 fs-1">📍</div>
+            <h5 class="card-title">Our Location & Hours</h5>
+            
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.459934633256!2d-100.51965422563123!3d28.70579777562484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865f8dad5ba736ed%3A0xcc9d10c89f1c4d7c!2sDr.%20Jose%20Alba%20Galvan!5e0!3m2!1ses-419!2smx!4v1758145286411!5m2!1ses-419!2smx" width="100%" height="50%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    <br><h8>Abasolo 214 Oriente , Piedras Negras, Mexico, 26017</h8>
+
+</div>
+  
+    </div>
+  </div>
+  </section>
+
+  <section id="services">
+    <h1 style="text-align: center;">Our Services</h1>
+    <div class="row g-4 mt-4">
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <div class="card-body text-center">
+            <h5>Extractions</h5>
+            <p>
+                A safe procedure to remove a tooth that is severely damaged, fractured, or causing spacing issues. It is performed to relieve pain, treat infections, and prepare your mouth for future restorative treatments.
+            </p>
+            <img src="extraccion.jpg" alt="" id="extraccion">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <div class="card-body text-center">
+            <h5>Root Canals</h5>
+            <p>
+                Also known as endodontic treatment, it is the ideal solution to save a tooth whose pulp (nerve) is infected. The inside of the tooth is cleaned and sealed to eliminate pain and preserve your natural tooth.
+            </p>
+            <img src="endodoncia.png" alt="" id="endodoncia">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <div class="card-body text-center">
+            <h5>Cleanings</h5>
+            <p>
+                Essential for complete oral health. In this preventive procedure, we remove accumulated plaque and tartar that daily brushing cannot, helping to prevent cavities, gum disease, and bad breath.
+            </p>
+            <img src="limpieza.jpg" alt="" id="limpieza">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <div class="card-body text-center">
+            <h5>Braces</h5>
+            <p>
+                Classic orthodontic treatment to correct teeth alignment and improve bite. Braces gradually move teeth to their ideal position, achieving a more aesthetic, functional, and healthy smile.
+            </p>
+            <img src="brackets.jpg" alt="" id="brackets">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <div class="card-body text-center">
+            <h5>Dental Implants</h5>
+            <p>
+                The most advanced solution to replace a lost tooth. It consists of a titanium post that acts as an artificial root, on which a crown identical to a natural tooth is placed, permanently restoring function and aesthetics.
+            </p>
+            <img src="implantedental.png" alt="" id="corona">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <div class="card-body text-center">
+            <h5>Fillings (Resins)</h5>
+            <p>
+                Aesthetic restorations used to repair teeth with cavities, minor fractures, or to improve their shape. Being tooth-colored, they blend perfectly with your smile, offering a durable and natural result.
+            </p>
+            <img src="resinas.jpg" alt="" id="resina">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="specialists">
+    <div>
+      <h1>Our Specialists</h1>
+      <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" class="card-img-top" alt="Specialist">
+          <div class="card-body text-center">
+            <h5 class="card-title">Dr. Ana López</h5>
+            <p class="card-text">General Dentist with 10 years of experience in cosmetic dentistry.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" class="card-img-top" alt="Specialist">
+          <div class="card-body text-center">
+            <h5 class="card-title">Dr. Carlos Méndez</h5>
+            <p class="card-text">Orthodontist specializing in braces and clear aligners.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <img src="https://randomuser.me/api/portraits/women/65.jpg" class="card-img-top" alt="Specialist">
+          <div class="card-body text-center">
+            <h5 class="card-title">Lic. Mariana Torres</h5>
+            <p class="card-text">Dental Hygienist focused on preventive care and cleanings.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <img src="https://randomuser.me/api/portraits/men/55.jpg" class="card-img-top" alt="Specialist">
+          <div class="card-body text-center">
+            <h5 class="card-title">Dr. Javier Ramos</h5>
+            <p class="card-text">Endodontist focused on root canal treatments.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <img src="https://randomuser.me/api/portraits/women/23.jpg" class="card-img-top" alt="Specialist">
+          <div class="card-body text-center">
+            <h5 class="card-title">Dr. Sofía Martínez</h5>
+            <p class="card-text">Pediatric Dentist with experience in child dental care.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <img src="https://randomuser.me/api/portraits/men/75.jpg" class="card-img-top" alt="Specialist">
+          <div class="card-body text-center">
+            <h5 class="card-title">Lic. Ricardo Pérez</h5>
+            <p class="card-text">Dental Assistant specialized in patient care and support.</p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact-section">
+      <img src="info.jpg" alt="" id="imginfo">
+  </section>
+  <footer class="bg-dark text-white text-center py-3">
+    <h6 class="mb-0">© 2025 Dr. Alba Galvan</h6>
+  </footer>
+
+  <script>
+    // Observer to detect when a section enters the screen
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible"); // appears
+        } else {
+          entry.target.classList.remove("visible"); // disappears
+        }
+      });
+    }, { threshold: 0.2 }); // sensitivity of the effect
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+  <script>
+    // --- START: SCRIPT FOR MANUAL SLIDESHOW ---
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Function to go forward or backward
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Function to go to a specific image (with the dots)
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    // --- END: SCRIPT FOR MANUAL SLIDESHOW ---
+  </script>
+</body>
+</html>
