@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <title>Dr. Alba Galvan</title>
   <style>
-    /* General Styles */
+    /* Estilos Generales */
     * {
       margin: 0;
       padding: 0;
@@ -21,7 +21,7 @@
     }
 
     section {
-      min-height: 100vh; /* each section takes up the full screen */
+      min-height: 100vh; /* cada sección ocupa la pantalla completa */
       display: flex;
       justify-content: center;
       text-align: center;
@@ -36,7 +36,7 @@
       transform: translateY(0);
     }
 
-    /* Different colors to differentiate sections */
+    /* Colores distintos para diferenciar secciones */
     #services { background: linear-gradient(135deg, #ff9966, #ff5e62); color: white; }
     #portfolio { background: linear-gradient(135deg, #56ab2f, #a8e063); color: white; }
     #contact { background: linear-gradient(135deg, #36d1dc, #5b86e5); color: white; }
@@ -119,7 +119,7 @@
       min-height: auto;
       padding: 0;
     }
-    /* --- START: STYLES FOR MANUAL SLIDESHOW --- */
+    /* --- INICIO: ESTILOS PARA LA GALERÍA MANUAL --- */
 
     .slideshow-container {
       width: 100%;
@@ -127,18 +127,18 @@
       margin: auto;
     }
 
-    /* Hide the images by default */
+    /* Ocultar las imágenes por defecto */
     .mySlides {
       display: none;
-      height: 100vh; /* Occupies the full height of the section */
+      height: 100vh; /* Ocupa toda la altura de la sección */
     }
     .mySlides img {
       width: 100%;
       height: 100%;
-      object-fit: contain; /* Ensures the image fits completely */
+      object-fit: contain; /* Asegura que la imagen quepa completa */
     }
 
-    /* Next & previous buttons */
+    /* Botones de Siguiente y Anterior */
     .prev, .next {
       cursor: pointer;
       position: absolute;
@@ -162,7 +162,7 @@
       background-color: rgba(0,0,0,0.8);
     }
 
-    /* Navigation dots */
+    /* Puntos de navegación */
     .dot-container {
         text-align: center;
         padding: 20px;
@@ -184,31 +184,31 @@
       background-color: #717171;
     }
 
-    /* --- END: STYLES FOR MANUAL SLIDESHOW --- */
+    /* --- FIN: ESTILOS PARA LA GALERÍA MANUAL --- */
   </style>
 </head>
 <body>
   <nav>
-    <a href="#home">Home</a>
-    <a href="#information">Information</a>
-    <a href="#services">Services</a>
-    <a href="#specialists">Specialists</a>
-    <a href="#contact-section">Contact</a>
+    <a href="#home">Inicio</a>
+    <a href="#information">Información</a>
+    <a href="#services">Servicios</a>
+    <a href="#specialists">Especialistas</a>
+    <a href="#contact-section">Contacto</a>
   </nav>
 
   <section id="home">
     <div class="slideshow-container">
     
         <div class="mySlides">
-            <img src="logo.jpg" alt="Image 1">
+            <img src="logo.jpg" alt="Imagen 1">
         </div>
     
         <div class="mySlides">
-            <img src="imagen1.jpg" alt="Image 2">
+            <img src="imagen1.jpg" alt="Imagen 2">
         </div>
     
         <div class="mySlides">
-            <img src="imagen2.jpg" alt="Image 3">
+            <img src="imagen2.jpg" alt="Imagen 3">
         </div>
     
         <a class="next" onclick="plusSlides(1)">❯</a>
@@ -229,14 +229,14 @@
         <div class="card shadow h-100">
           <div class="card-body">
             <div class="mb-3 fs-1 text-danger">🦷</div>
-            <h5 class="card-title">About Us</h5>
+            <h5 class="card-title">Nosotros</h5>
             <br>
-            <p class="card-text">We are a team of specialists ready 
-                to take care of your smile. We offer quality dental care.
+            <p class="card-text">Somos un equipo de especialistas listos 
+                para cuidar de tu sonrisa. Ofrecemos atención dental de calidad.
             </p>
             <br>
             <p>
-                Call Us
+                Llámanos
                 📞878-78-245-77
                 <br>
                 📞830-3-25-47-37
@@ -250,13 +250,13 @@
         <div class="card shadow h-100">
           <div class="card-body">
             <div class="mb-3 fs-1 text-primary">👤</div>
-            <h5 class="card-title">Contact Us</h5>
-                 <form name="contacto-paciente" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <h5 class="card-title">Contáctanos</h5>
+                <form name="contacto-paciente" method="POST" data-netlify="true" netlify-honeypot="bot-field">
     
     <input type="hidden" name="form-name" value="contacto-paciente" />
     
     <p style="display:none;">
-      <label>No llenes esto : <input name="bot-field" /></label>
+      <label>No llenes esto: <input name="bot-field" /></label>
     </p>
 
     <div class="row">
@@ -298,10 +298,10 @@
         <div class="card shadow h-100">
           <div class="card-body">
             <div class="mb-3 fs-1">📍</div>
-            <h5 class="card-title">Our Location & Hours</h5>
+            <h5 class="card-title">Nuestra Ubicación y Horarios</h5>
             
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.459934633256!2d-100.51965422563123!3d28.70579777562484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865f8dad5ba736ed%3A0xcc9d10c89f1c4d7c!2sDr.%20Jose%20Alba%20Galvan!5e0!3m2!1ses-419!2smx!4v1758145286411!5m2!1ses-419!2smx" width="100%" height="50%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    <br><h8>Abasolo 214 Oriente , Piedras Negras, Mexico, 26017</h8>
-
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27995.679470543746!2d-100.55312818916012!3d28.7057978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865f8dad5ba736ed%3A0xcc9d10c89f1c4d7c!2sDr.%20Jose%20Alba%20Galvan!5e0!3m2!1ses-419!2smx!4v1758221688534!5m2!1ses-419!2smx" width="100%" height="50%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<br><h8>C. Abasolo 214, Centro, 26000 Piedras Negras, Coah.</8>
 </div>
   
     </div>
@@ -309,14 +309,14 @@
   </section>
 
   <section id="services">
-    <h1 style="text-align: center;">Our Services</h1>
+    <h1 style="text-align: center;">Nuestros Servicios</h1>
     <div class="row g-4 mt-4">
       <div class="col-md-4">
         <div class="card shadow h-100">
           <div class="card-body text-center">
-            <h5>Extractions</h5>
+            <h5>Extracciones</h5>
             <p>
-                A safe procedure to remove a tooth that is severely damaged, fractured, or causing spacing issues. It is performed to relieve pain, treat infections, and prepare your mouth for future restorative treatments.
+                Procedimiento seguro para remover un diente que está severamente dañado, fracturado o causa problemas de espacio. Se realiza para aliviar el dolor, tratar infecciones y preparar tu boca para futuros tratamientos restauradores.
             </p>
             <img src="extraccion.jpg" alt="" id="extraccion">
           </div>
@@ -325,9 +325,9 @@
       <div class="col-md-4">
         <div class="card shadow h-100">
           <div class="card-body text-center">
-            <h5>Root Canals</h5>
+            <h5>Endodoncias</h5>
             <p>
-                Also known as endodontic treatment, it is the ideal solution to save a tooth whose pulp (nerve) is infected. The inside of the tooth is cleaned and sealed to eliminate pain and preserve your natural tooth.
+                También conocido como tratamiento de conducto, es la solución ideal para salvar un diente cuya pulpa (nervio) está infectada. Se limpia el interior del diente y se sella para eliminar el dolor y conservar tu pieza dental natural.
             </p>
             <img src="endodoncia.png" alt="" id="endodoncia">
           </div>
@@ -336,9 +336,9 @@
       <div class="col-md-4">
         <div class="card shadow h-100">
           <div class="card-body text-center">
-            <h5>Cleanings</h5>
+            <h5>Limpiezas</h5>
             <p>
-                Essential for complete oral health. In this preventive procedure, we remove accumulated plaque and tartar that daily brushing cannot, helping to prevent cavities, gum disease, and bad breath.
+                Esenciales para una salud bucal completa. En este procedimiento preventivo, eliminamos la placa y el sarro acumulado que el cepillado diario no puede quitar, ayudando a prevenir caries y enfermedad de las encías.
             </p>
             <img src="limpieza.jpg" alt="" id="limpieza">
           </div>
@@ -347,9 +347,9 @@
       <div class="col-md-4">
         <div class="card shadow h-100">
           <div class="card-body text-center">
-            <h5>Braces</h5>
+            <h5>Brackets</h5>
             <p>
-                Classic orthodontic treatment to correct teeth alignment and improve bite. Braces gradually move teeth to their ideal position, achieving a more aesthetic, functional, and healthy smile.
+                Tratamiento de ortodoncia clásico para corregir la alineación de los dientes y mejorar la mordida, logrando una sonrisa más estética, funcional y saludable.
             </p>
             <img src="brackets.jpg" alt="" id="brackets">
           </div>
@@ -358,9 +358,9 @@
       <div class="col-md-4">
         <div class="card shadow h-100">
           <div class="card-body text-center">
-            <h5>Dental Implants</h5>
+            <h5>Implantes Dentales</h5>
             <p>
-                The most advanced solution to replace a lost tooth. It consists of a titanium post that acts as an artificial root, on which a crown identical to a natural tooth is placed, permanently restoring function and aesthetics.
+                La solución más avanzada para reemplazar un diente perdido. Consiste en un poste de titanio sobre el cual se coloca una corona idéntica a un diente natural, restaurando la función y la estética de forma permanente.
             </p>
             <img src="implantedental.png" alt="" id="corona">
           </div>
@@ -369,9 +369,9 @@
       <div class="col-md-4">
         <div class="card shadow h-100">
           <div class="card-body text-center">
-            <h5>Fillings (Resins)</h5>
+            <h5>Resinas</h5>
             <p>
-                Aesthetic restorations used to repair teeth with cavities, minor fractures, or to improve their shape. Being tooth-colored, they blend perfectly with your smile, offering a durable and natural result.
+                Restauraciones estéticas que se usan para reparar dientes con caries o fracturas leves. Al ser del color del diente, se mimetizan perfectamente con tu sonrisa, ofreciendo un resultado duradero y natural.
             </p>
             <img src="resinas.jpg" alt="" id="resina">
           </div>
@@ -382,64 +382,64 @@
 
   <section id="specialists">
     <div>
-      <h1>Our Specialists</h1>
+      <h1>Nuestros Especialistas</h1>
       <div class="row g-4">
       <div class="col-md-4">
         <div class="card shadow h-100">
-          <img src="https://randomuser.me/api/portraits/women/44.jpg" class="card-img-top" alt="Specialist">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" class="card-img-top" alt="Especialista">
           <div class="card-body text-center">
-            <h5 class="card-title">Dr. Ana López</h5>
-            <p class="card-text">General Dentist with 10 years of experience in cosmetic dentistry.</p>
+            <h5 class="card-title">Dra. Ana López</h5>
+            <p class="card-text">Odontóloga General con 10 años de experiencia en odontología cosmética.</p>
           </div>
         </div>
       </div>
 
       <div class="col-md-4">
         <div class="card shadow h-100">
-          <img src="https://randomuser.me/api/portraits/men/32.jpg" class="card-img-top" alt="Specialist">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" class="card-img-top" alt="Especialista">
           <div class="card-body text-center">
             <h5 class="card-title">Dr. Carlos Méndez</h5>
-            <p class="card-text">Orthodontist specializing in braces and clear aligners.</p>
+            <p class="card-text">Ortodoncista especializado en brackets y alineadores transparentes.</p>
           </div>
         </div>
       </div>
 
       <div class="col-md-4">
         <div class="card shadow h-100">
-          <img src="https://randomuser.me/api/portraits/women/65.jpg" class="card-img-top" alt="Specialist">
+          <img src="https://randomuser.me/api/portraits/women/65.jpg" class="card-img-top" alt="Especialista">
           <div class="card-body text-center">
             <h5 class="card-title">Lic. Mariana Torres</h5>
-            <p class="card-text">Dental Hygienist focused on preventive care and cleanings.</p>
+            <p class="card-text">Higienista Dental enfocada en cuidados preventivos y limpiezas.</p>
           </div>
         </div>
       </div>
 
       <div class="col-md-4">
         <div class="card shadow h-100">
-          <img src="https://randomuser.me/api/portraits/men/55.jpg" class="card-img-top" alt="Specialist">
+          <img src="https://randomuser.me/api/portraits/men/55.jpg" class="card-img-top" alt="Especialista">
           <div class="card-body text-center">
             <h5 class="card-title">Dr. Javier Ramos</h5>
-            <p class="card-text">Endodontist focused on root canal treatments.</p>
+            <p class="card-text">Endodoncista enfocado en tratamientos de conducto.</p>
           </div>
         </div>
       </div>
 
       <div class="col-md-4">
         <div class="card shadow h-100">
-          <img src="https://randomuser.me/api/portraits/women/23.jpg" class="card-img-top" alt="Specialist">
+          <img src="https://randomuser.me/api/portraits/women/23.jpg" class="card-img-top" alt="Especialista">
           <div class="card-body text-center">
-            <h5 class="card-title">Dr. Sofía Martínez</h5>
-            <p class="card-text">Pediatric Dentist with experience in child dental care.</p>
+            <h5 class="card-title">Dra. Sofía Martínez</h5>
+            <p class="card-text">Odontopediatra con experiencia en el cuidado dental infantil.</p>
           </div>
         </div>
       </div>
 
       <div class="col-md-4">
         <div class="card shadow h-100">
-          <img src="https://randomuser.me/api/portraits/men/75.jpg" class="card-img-top" alt="Specialist">
+          <img src="https://randomuser.me/api/portraits/men/75.jpg" class="card-img-top" alt="Especialista">
           <div class="card-body text-center">
             <h5 class="card-title">Lic. Ricardo Pérez</h5>
-            <p class="card-text">Dental Assistant specialized in patient care and support.</p>
+            <p class="card-text">Asistente Dental especializado en la atención y apoyo al paciente.</p>
           </div>
         </div>
       </div>
@@ -448,40 +448,40 @@
   </section>
 
   <section id="contact-section">
-      <img src="info.jpg" alt="" id="imginfo">
+      <img src="info.jpg" alt="Información de contacto" id="imginfo">
   </section>
   <footer class="bg-dark text-white text-center py-3">
     <h6 class="mb-0">© 2025 Dr. Alba Galvan</h6>
   </footer>
 
   <script>
-    // Observer to detect when a section enters the screen
+    // Observador para detectar cuando una sección entra en la pantalla
     const sections = document.querySelectorAll("section");
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("visible"); // appears
+          entry.target.classList.add("visible"); // aparece
         } else {
-          entry.target.classList.remove("visible"); // disappears
+          entry.target.classList.remove("visible"); // desaparece
         }
       });
-    }, { threshold: 0.2 }); // sensitivity of the effect
+    }, { threshold: 0.2 }); // sensibilidad del efecto
 
     sections.forEach(section => {
       observer.observe(section);
     });
   </script>
   <script>
-    // --- START: SCRIPT FOR MANUAL SLIDESHOW ---
+    // --- INICIO: SCRIPT PARA LA GALERÍA MANUAL ---
     let slideIndex = 1;
     showSlides(slideIndex);
 
-    // Function to go forward or backward
+    // Función para avanzar o retroceder
     function plusSlides(n) {
       showSlides(slideIndex += n);
     }
 
-    // Function to go to a specific image (with the dots)
+    // Función para ir a una imagen específica (con los puntos)
     function currentSlide(n) {
       showSlides(slideIndex = n);
     }
@@ -501,7 +501,7 @@
       slides[slideIndex-1].style.display = "block";  
       dots[slideIndex-1].className += " active";
     }
-    // --- END: SCRIPT FOR MANUAL SLIDESHOW ---
+    // --- FIN: SCRIPT PARA LA GALERÍA MANUAL ---
   </script>
 </body>
 </html>
