@@ -190,6 +190,11 @@
     object-fit: cover; 
     width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
   }
+  .card-image-wrapper img{
+    height: 590px;
+    width: 100%;
+    object-fit: contain;
+  }
 
   /* Estilo de los botones de navegación (anterior/siguiente) */
   .card-prev, .card-next {
